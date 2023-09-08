@@ -1,8 +1,8 @@
 # Next.js + Tailwind CSS + +Thirdweb + Ethereum + Web3 + TypeScript Starter and Boilerplate
 
 <div align="center">
-  <h2>🔋 ts-nextjs-tailwind-thirweb-starter</h2>
-  <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
+  <h2>ts-nextjs-tailwind-thirweb-starter</h2>
+  <p>Next.js + Tailwind + ThirdWeb + TypeScript starter packed with useful development features.</p>
   <p>Made by <a href="https://github.com/annasudol">Anna Sudol</a></p>
 </div>
 
@@ -11,9 +11,8 @@
 This repository is 🔋 battery packed with:
 
 - ⚡️ Next.js 13 with App Router
-- ⚛️ React 18
 - ✨ TypeScript
-- ⚛️ Thirdweb - SDKs in every language, smart contracts, tools, and infrastructure for web3 development
+- Thirdweb - SDKs in every language, smart contracts, tools, and infrastructure for web3 development
 - 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
 - 🃏 Jest — Configured for unit testing
 - 📈 Absolute Import and Path Alias — Import components using `@/` prefix
