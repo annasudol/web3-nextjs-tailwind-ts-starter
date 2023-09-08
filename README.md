@@ -20,7 +20,6 @@ This repository is 🔋 battery packed with:
 - 📏 ESLint — Find and fix problems in your code, also will **auto sort** your imports
 - 💖 Prettier — Format your code consistently
 - 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
-- 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
 - 👷 Github Actions — Lint your code on PR
 
 ## 3. Run the development server
@@ -32,15 +31,3 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
-
-## 4. Change defaults
-
-There are some things you need to change including title, urls, favicons, etc.
-
-Find all comments with !STARTERCONF, then follow the guide.
-
-Don't forget to change the package name in package.json
-
-### 5. Commit Message Convention
-
-This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
