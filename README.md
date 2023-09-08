@@ -26,6 +26,10 @@ This repository is 🔋 battery packed with:
 You can start the server using this command:
 
 ```bash
+yarn install
+```
+
+```bash
 yarn dev
 ```
 
