@@ -6,7 +6,10 @@ import '@/styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider supportedChains={[Goerli]}>
+    <ThirdwebProvider
+      supportedChains={[Goerli]}
+      clientId={process.env.NEXT_THIRDWEB_CLIENT_ID}
+    >
       <Component {...pageProps} />
     </ThirdwebProvider>
   );

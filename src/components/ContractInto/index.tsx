@@ -1,7 +1,4 @@
 import { useAddress, useContract, useContractRead } from '@thirdweb-dev/react';
-import { useMemo } from 'react';
-
-import Spinner from '@/components/Spinner';
 
 import { formatBigNumber } from '@/utils/formatBigNumbers';
 
@@ -13,41 +10,28 @@ const ContractInfo = () => {
     'balanceOf',
     [address]
   );
-  const { data: name, isLoading: isLoadingName } = useContractRead(
-    contract,
-    'symbol'
-  );
+  const { data: name } = useContractRead(contract, 'symbol');
   const { data: totalSupply, isLoading: isLoadingSupply } = useContractRead(
     contract,
     'totalSupply'
   );
   const balanceFormatted = balance && formatBigNumber(balance);
   const totalSupplyFormatted = totalSupply && formatBigNumber(totalSupply);
-  const contractErc20Values = useMemo(() => {
-    return isLoadingBalance || isLoadingName || isLoadingSupply ? (
-      <Spinner />
-    ) : (
-      <>
-        <p>
-          {!address
-            ? 'Not connected to Wallet'
-            : `Balance: ${balanceFormatted} ${name}`}
-        </p>
-        <p>
-          Total Supply: {totalSupplyFormatted} {name}
-        </p>
-      </>
-    );
-  }, [
-    address,
-    balanceFormatted,
-    isLoadingBalance,
-    isLoadingName,
-    isLoadingSupply,
-    name,
-    totalSupplyFormatted,
-  ]);
-
-  return <div className='my-4'>{contractErc20Values}</div>;
+  return (
+    <div className='my-4'>
+      <p>
+        {!address
+          ? 'Not connected to Wallet'
+          : isLoadingBalance
+          ? '...Loading balance'
+          : `Balance: ${balanceFormatted} ${name}`}
+      </p>
+      <p>
+        {isLoadingSupply
+          ? '...Loading Total supply'
+          : `Total Supply: ${totalSupplyFormatted} ${name}`}
+      </p>
+    </div>
+  );
 };
 export default ContractInfo;
